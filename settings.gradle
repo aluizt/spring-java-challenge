@@ -1,0 +1,4 @@
+rootProject.name = 'spring-java-challenge'
+include 'contract'
+include 'impl'
+
