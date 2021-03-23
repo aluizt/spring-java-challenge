@@ -1,10 +1,14 @@
 package br.com.tavares.springjavachallenge.springjavachallenge.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
+import lombok.Data;
 import org.springframework.http.HttpStatus;
 
 import java.util.Map;
 
+@Data
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ErrorModel {
 
@@ -17,48 +21,6 @@ public class ErrorModel {
         this.message = message;
         this.error = error;
         this.status = status;
-        this.formErrors = formErrors;
-    }
-
-    @Override
-    public String toString() {
-        return "ErrorModel{" +
-                "message='" + message + '\'' +
-                ", error='" + error + '\'' +
-                ", status=" + status +
-                ", formErrors=" + formErrors +
-                '}';
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getError() {
-        return error;
-    }
-
-    public void setError(String error) {
-        this.error = error;
-    }
-
-    public HttpStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(HttpStatus status) {
-        this.status = status;
-    }
-
-    public Map<String, String> getFormErrors() {
-        return formErrors;
-    }
-
-    public void setFormErrors(Map<String, String> formErrors) {
         this.formErrors = formErrors;
     }
 }

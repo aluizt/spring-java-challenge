@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioService {
+
     private UsuarioRepository usuarioRepository;
 
     public UsuarioService(UsuarioRepository usuarioRepository) {
@@ -15,6 +16,4 @@ public class UsuarioService {
     public UsuarioModel buscaUsuario(Integer matriculaUsuario) {
         return usuarioRepository.buscarUsuario(matriculaUsuario);
     }
-
-
 }

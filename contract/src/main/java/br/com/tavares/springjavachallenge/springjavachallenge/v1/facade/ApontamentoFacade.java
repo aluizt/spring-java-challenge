@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 public class ApontamentoFacade {
     private ApontamentoFacadeImpl apontamentoFacade;
 
-    ApontamentoFacade(ApontamentoFacadeImpl apontamentoFacade){
-        this.apontamentoFacade=apontamentoFacade;
+    ApontamentoFacade(ApontamentoFacadeImpl apontamentoFacade) {
+        this.apontamentoFacade = apontamentoFacade;
     }
 
-    public Integer adicionarHoras(HorasApontadasModel horasApontadasModel){
+    public Integer adicionarHoras(HorasApontadasModel horasApontadasModel) {
         return apontamentoFacade.adicionarHoras(horasApontadasModel);
     }
 }

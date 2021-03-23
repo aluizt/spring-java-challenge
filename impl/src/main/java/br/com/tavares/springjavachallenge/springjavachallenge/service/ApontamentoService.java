@@ -47,7 +47,7 @@ public class ApontamentoService {
                 .filter(projetoUsuario -> projetoUsuario.getIdProjeto().equals(horasApontadasModel.getIdProjeto()))
                 .findFirst()
                 .orElseThrow(() -> new GenericException(
-                        String.format("Projeto %s não acessível para este usuario",
+                        String.format("Projeto %s não acessível para este usuário",
                                 horasApontadasModel.getIdProjeto()
                         ),
                         BAD_REQUEST));

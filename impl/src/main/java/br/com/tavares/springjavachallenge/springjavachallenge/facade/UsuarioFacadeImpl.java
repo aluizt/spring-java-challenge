@@ -18,11 +18,7 @@ public class UsuarioFacadeImpl {
         this.projetoStrategyService = projetoStrategyService;
     }
 
-    public UsuarioModel buscaUsuario(Integer matriculaUsuario) {
-        return usuarioService.buscaUsuario(matriculaUsuario);
-    }
-
     public List<ProjetoModel> buscaProjetosDoUsuario(Integer matriculaUsuario) {
-        return projetoStrategyService.buscarProjetosStrategy(buscaUsuario(matriculaUsuario));
+        return projetoStrategyService.buscarProjetosStrategy( usuarioService.buscaUsuario(matriculaUsuario));
     }
 }

@@ -5,14 +5,19 @@ import br.com.tavares.springjavachallenge.springjavachallenge.v1.model.HorasApon
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+import static java.time.format.DateTimeFormatter.ofPattern;
+
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class HorasApontadasMapper {
     public static HorasApontadasModel mapToHorasApontadasModel(HorasApontadasRequest horasApontadasRequest) {
         return HorasApontadasModel.builder()
-                .dataApontamento(horasApontadasRequest.getDataApontamento())
+                .dataApontamento(LocalDate.parse(horasApontadasRequest.getDataApontamento(), ofPattern("dd-MM-yyyy")))
                 .idProjeto(horasApontadasRequest.getIdProjeto())
                 .matriculaUsuario(horasApontadasRequest.getMatriculaUsuario())
-                .horas(horasApontadasRequest.getTempo())
+                .horas(LocalTime.parse(horasApontadasRequest.getTempo()))
                 .build();
     }
 }

@@ -11,6 +11,9 @@ import java.util.stream.Collectors;
 @Component
 public class HoraUtil {
 
+    public HoraUtil() {
+    }
+
     public String acumularHoras(List<HorasApontadasModel> horasApontadasModels) {
         List<String> lista = horasApontadasModels.stream()
                 .map(HorasApontadasModel::getHoras)

@@ -65,6 +65,8 @@ allprojects {
 		implementation 'org.springframework.boot:spring-boot-starter-web'
 		implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
 		implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+		implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.4.2'
+
 		compileOnly 'org.projectlombok:lombok'
 		runtimeOnly 'com.h2database:h2'
 		runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
